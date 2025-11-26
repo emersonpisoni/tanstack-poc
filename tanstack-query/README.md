@@ -2,9 +2,15 @@
 
 ### Powerful asynchronous state management, server-state utilities and data fetching
 
-### Motivation
+### Why you need Tanstack Query?
 
-soon
+Using fetch-in-useEffect way can include problems with:
+
+- Race condition
+- Loading state
+- Empty state
+- Data and Error reset
+- StrictMode will fire twice
 
 ## Maintainer - Dominik Dorfmeister
 Blog - https://tkdodo.eu/blog/practical-react-query
