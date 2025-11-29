@@ -21,7 +21,7 @@ function Example() {
     queryKey: ['repoData'],
     queryFn: async () => {
       const response = await fetch(
-        'https://api.github.com/repos/TanStack/query',
+        'https://api.github.com/repos/emersonpisoni/tanstack-poc',
       )
       return await response.json()
     },

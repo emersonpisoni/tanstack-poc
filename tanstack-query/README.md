@@ -33,13 +33,22 @@ Blog - https://tkdodo.eu/blog/practical-react-query
 - UI State
 - Increase bundle size
 
-## Setup
+## [Similar solutions](https://tanstack.com/query/latest/docs/framework/react/comparison)
+
+- SWR
+- Apollo Client
+- RTK-Query
+- React Router
+
+## [Setup](https://tanstack.com/query/latest/docs/framework/react/installation)
 
 ### Create project with Tanstack Query
 
 `npm create vite@latest poc-tanstack --template react-ts`
 
 `npm i -D @tanstack/eslint-plugin-query`
+
+`npm i @tanstack/react-query-devtools`
 
 ## Core comcepts
 
