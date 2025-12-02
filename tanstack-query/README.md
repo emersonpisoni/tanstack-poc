@@ -88,10 +88,19 @@ Using fetch-in-useEffect way can include problems with:
 ### Covered by POC
 
 [x] - Simple comparision between fetch-in-useeffect and tanstack query
+
+[x] - Status queries result (isPending, isError...)
+
 [ ] - Queries
+
 [ ] - Query Keys
+
 [ ] - Query Functions
+
 [ ] - Query Options
+
 [ ] - Network Mode
+
 [ ] - Parallel Queries
+
 [ ] - Dependent Queries
