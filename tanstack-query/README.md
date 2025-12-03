@@ -104,3 +104,16 @@ Using fetch-in-useEffect way can include problems with:
 [ ] - Parallel Queries
 
 [ ] - Dependent Queries
+
+## Questions
+
+### [What is StrictMode?](https://react.dev/reference/react/StrictMode)
+
+Use StrictMode to enable additional development behaviors and warnings for the component tree.
+
+- Your components will re-render an extra time to find bugs caused by impure rendering.
+- Your components will re-run Effects an extra time to find bugs caused by missing Effect cleanup.
+- Your components will re-run refs callbacks an extra time to find bugs caused by missing ref cleanup.
+- Your components will be checked for usage of deprecated APIs.
+
+React assumes that every component you write is a pure function. This means that React components you write must always return the same JSX given the same inputs (props, state, and context).
