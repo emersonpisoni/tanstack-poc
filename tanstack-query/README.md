@@ -28,9 +28,6 @@ Using fetch-in-useEffect way can include problems with:
 
 ### Cons
 
-- Learning curve
-- Incorrect use of caches
-- UI State
 - Increase bundle size
 
 ## [Similar solutions](https://tanstack.com/query/latest/docs/framework/react/comparison)
