@@ -80,6 +80,38 @@ Using fetch-in-useEffect way can include problems with:
 - Mutations
 - Query invalidation
 
+### Queries
+
+Most simple example of a Query:
+
+```js
+  const { isPending, error, data } = useQuery({
+    queryKey: ['repoData'],
+    queryFn: () =>
+      fetch('https://api.github.com/repos/TanStack/query').then((res) =>
+        res.json(),
+      ),
+  })
+
+```
+
+- `staleTime` is how much time de data is fresh.
+  - if 0, the data is always stale, that means it always will be refetched.
+  - If > 0, the data will be fresh during this time. after, will be stale again.
+  - if `Inifinity` the data will always use the cache.
+
+- Auto Refresh occurs when
+  - staleTime expires
+  - Component remounts
+  - calling `refetch` manually
+  - other ways like window focus, reconnection, interval
+
+### Shared cache
+
+- Components with the same queryKey:
+  - Share the same data, state and cache
+  - Fire just 1 request
+
 ## Examples
 
 ### Covered by POC
@@ -88,19 +120,9 @@ Using fetch-in-useEffect way can include problems with:
 
 [x] - Status queries result (isPending, isError...)
 
-[ ] - Queries
+[x] - useQuery
 
-[ ] - Query Keys
-
-[ ] - Query Functions
-
-[ ] - Query Options
-
-[ ] - Network Mode
-
-[ ] - Parallel Queries
-
-[ ] - Dependent Queries
+[x] - Shared cache
 
 ## Questions
 

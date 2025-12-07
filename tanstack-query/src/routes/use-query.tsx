@@ -9,7 +9,7 @@ type Repo = {
 }
 
 export default function UseQueryPage() {
-  const { data, isPending, error, isFetching, refetch, dataUpdatedAt } = useQuery<Repo>({
+  const { data, isPending, error, isFetching, refetch, dataUpdatedAt, isLoading } = useQuery<Repo>({
     queryKey: ['repoData'],
     queryFn: async () => {
       console.log("Fetch started...");
@@ -21,6 +21,8 @@ export default function UseQueryPage() {
     },
     staleTime: 5000,
   })
+
+  console.log({ isLoading, isPending, isFetching });
 
   return (
     <div>

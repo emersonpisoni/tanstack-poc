@@ -1,18 +1,19 @@
 import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from './routes/home'
 import UseQueryPage from './routes/use-query'
+import SharedCachePage from './routes/shared-cache'
 
 const links = [
-  { to: '/', label: '🏠 Início' },
+  { to: '/', label: '🏠 Home' },
   { to: '/use-query', label: '1️⃣ useQuery' },
-  // { to: '/cache-shared', label: '2️⃣ Cache compartilhado' },
-  // { to: '/refetch', label: '3️⃣ Refetch automático' },
+  { to: '/shared-cache', label: '2️⃣ Shared cache' },
+  // { to: '/refetch', label: '3️⃣ Auto Refetch' },
   // { to: '/mutation', label: '4️⃣ useMutation' },
-  // { to: '/invalidate', label: '5️⃣ Invalidação' },
+  // { to: '/invalidate', label: '5️⃣ Invalidation' },
   // { to: '/optimistic', label: '6️⃣ Optimistic update' },
   // { to: '/prefetch', label: '7️⃣ Prefetch' },
-  // { to: '/pagination', label: '8️⃣ Paginação' },
-  // { to: '/persist-cache', label: '9️⃣ Persistência (conceito)' },
+  // { to: '/pagination', label: '8️⃣ Pagination' },
+  // { to: '/persist-cache', label: '9️⃣ Persistence (concept)' },
 ]
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/use-query" element={<UseQueryPage />} />
+          <Route path="/shared-cache" element={<SharedCachePage />} />
         </Routes>
       </main>
     </div>
