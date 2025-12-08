@@ -100,6 +100,8 @@ Most simple example of a Query:
   - If > 0, the data will be fresh during this time. after, will be stale again.
   - if `Inifinity` the data will always use the cache.
 
+### Auto refresh
+
 - Auto Refresh occurs when
   - staleTime expires
   - Component remounts
@@ -112,6 +114,22 @@ Most simple example of a Query:
   - Share the same data, state and cache
   - Fire just 1 request
 
+### Mutations
+
+Most simple useMutation inplementation
+```js
+const mutation = useMutation({
+  mutationFn: async (input) => { ... }
+})
+```
+
+And this is how you mutate something:
+```js
+mutation.mutate(input)
+```
+
+- You need to invalidate queries to update correctly the data after the mutations
+
 ## Examples
 
 ### Covered by POC
@@ -123,6 +141,10 @@ Most simple example of a Query:
 [x] - useQuery
 
 [x] - Shared cache
+
+[x] - Auto refetch
+
+[x] - Mutation
 
 ## Questions
 

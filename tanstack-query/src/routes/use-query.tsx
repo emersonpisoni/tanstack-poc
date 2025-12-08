@@ -26,7 +26,7 @@ export default function UseQueryPage() {
 
   return (
     <div>
-      <h2>1️⃣ useQuery – fetch + cache</h2>
+      <h2>useQuery – fetch + cache</h2>
       <p>
         First example: fetching data using <code>useQuery</code> with loading, error, success states and background refetch.
       </p>

@@ -24,7 +24,7 @@ export default function RefetchPage() {
 
   return (
     <div>
-      <h2>3️⃣ Automatic Refetch</h2>
+      <h2>Automatic Refetch</h2>
 
       <p>
         This demo shows how React Query automatically refetches when:

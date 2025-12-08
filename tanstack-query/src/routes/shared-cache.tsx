@@ -61,7 +61,7 @@ function TodosSummary() {
 export default function SharedCachePage() {
   return (
     <div>
-      <h2>2️⃣ Shared Cache Between Components</h2>
+      <h2>Shared Cache Between Components</h2>
       <p>
         Both components below use <code>useQuery</code> with the same{" "}
         <code>queryKey</code> (<code>["shared-todos"]</code>), which means they

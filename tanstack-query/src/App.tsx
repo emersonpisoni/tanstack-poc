@@ -3,18 +3,19 @@ import HomePage from './routes/home'
 import UseQueryPage from './routes/use-query'
 import SharedCachePage from './routes/shared-cache'
 import RefetchPage from './routes/refetch'
+import MutationPage from './routes/mutation'
 
 const links = [
   { to: '/', label: '🏠 Home' },
-  { to: '/use-query', label: '1️⃣ useQuery' },
-  { to: '/shared-cache', label: '2️⃣ Shared cache' },
-  { to: '/refetch', label: '3️⃣ Auto Refetch' },
-  // { to: '/mutation', label: '4️⃣ useMutation' },
-  // { to: '/invalidate', label: '5️⃣ Invalidation' },
-  // { to: '/optimistic', label: '6️⃣ Optimistic update' },
-  // { to: '/prefetch', label: '7️⃣ Prefetch' },
-  // { to: '/pagination', label: '8️⃣ Pagination' },
-  // { to: '/persist-cache', label: '9️⃣ Persistence (concept)' },
+  { to: '/use-query', label: 'useQuery' },
+  { to: '/shared-cache', label: 'Shared cache' },
+  { to: '/refetch', label: 'Auto Refetch' },
+  { to: '/mutation', label: 'useMutation' },
+  // { to: '/invalidate', label: 'Invalidation' },
+  // { to: '/optimistic', label: 'Optimistic update' },
+  // { to: '/prefetch', label: 'Prefetch' },
+  // { to: '/pagination', label: 'Pagination' },
+  // { to: '/persist-cache', label: 'Persistence (concept)' },
 ]
 
 export default function App() {
@@ -62,6 +63,7 @@ export default function App() {
           <Route path="/use-query" element={<UseQueryPage />} />
           <Route path="/shared-cache" element={<SharedCachePage />} />
           <Route path="/refetch" element={<RefetchPage />} />
+          <Route path="/mutation" element={<MutationPage />} />
         </Routes>
       </main>
     </div>
