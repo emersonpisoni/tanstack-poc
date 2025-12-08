@@ -2,12 +2,13 @@ import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from './routes/home'
 import UseQueryPage from './routes/use-query'
 import SharedCachePage from './routes/shared-cache'
+import RefetchPage from './routes/refetch'
 
 const links = [
   { to: '/', label: '🏠 Home' },
   { to: '/use-query', label: '1️⃣ useQuery' },
   { to: '/shared-cache', label: '2️⃣ Shared cache' },
-  // { to: '/refetch', label: '3️⃣ Auto Refetch' },
+  { to: '/refetch', label: '3️⃣ Auto Refetch' },
   // { to: '/mutation', label: '4️⃣ useMutation' },
   // { to: '/invalidate', label: '5️⃣ Invalidation' },
   // { to: '/optimistic', label: '6️⃣ Optimistic update' },
@@ -60,6 +61,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/use-query" element={<UseQueryPage />} />
           <Route path="/shared-cache" element={<SharedCachePage />} />
+          <Route path="/refetch" element={<RefetchPage />} />
         </Routes>
       </main>
     </div>
