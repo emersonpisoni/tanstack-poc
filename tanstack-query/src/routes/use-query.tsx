@@ -48,7 +48,7 @@ export default function UseQueryPage() {
           <h3>{data.full_name}</h3>
           <p>{data.description}</p>
           <p>
-            ⭐ {data.stargazers_count} | 🍴 {data.forks_count} | 👀{' '}
+            {data.stargazers_count} | 🍴 {data.forks_count} | 👀{' '}
             {data.subscribers_count}
           </p>
           {isFetching && <p>Updating in background</p>}

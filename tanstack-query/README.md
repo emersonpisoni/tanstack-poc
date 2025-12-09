@@ -37,7 +37,7 @@ Using fetch-in-useEffect way can include problems with:
 - RTK-Query
 - React Router
 
-## [Thinking in Tanstack Query](https://tkdodo.eu/blog/thinking-in-react-query) 😕
+## [Thinking in Tanstack Query](https://tkdodo.eu/blog/thinking-in-react-query)
 
 1 - It is NOT a data fetching library
   - It is a State Manager

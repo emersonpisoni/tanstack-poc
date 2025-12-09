@@ -29,7 +29,7 @@ export default function InvalidatePage() {
       return res.json();
     },
     onSuccess: () => {
-      console.log("🟢 Post created! Invalidating posts...");
+      console.log("Post created! Invalidating posts...");
       queryClient.invalidateQueries({ queryKey: ["posts"] });
     },
   });
