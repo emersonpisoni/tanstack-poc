@@ -129,6 +129,11 @@ mutation.mutate(input)
 ```
 
 - You need to invalidate queries to update correctly the data after the mutations
+- Tanstack registers a "observer" that signs changes in cache, when caches changes, the observer fires the required setStates.
+
+### Invalidate Queries
+
+- After a mutation, most cases you will want to update the queries
 
 ## Examples
 
@@ -145,6 +150,8 @@ mutation.mutate(input)
 [x] - Auto refetch
 
 [x] - Mutation
+
+[x] - Invalidate
 
 ## Questions
 
