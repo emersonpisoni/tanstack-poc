@@ -5,6 +5,7 @@ import SharedCachePage from './routes/shared-cache'
 import RefetchPage from './routes/refetch'
 import MutationPage from './routes/mutation'
 import InvalidatePage from './routes/invalidate-queries'
+import OptimisticUpdatePage from './routes/optimistic'
 
 const links = [
   { to: '/', label: '🏠 Home' },
@@ -13,7 +14,7 @@ const links = [
   { to: '/refetch', label: 'Auto Refetch' },
   { to: '/mutation', label: 'useMutation' },
   { to: '/invalidate-queries', label: 'Invalidation' },
-  // { to: '/optimistic', label: 'Optimistic update' },
+  { to: '/optimistic', label: 'Optimistic update' },
   // { to: '/prefetch', label: 'Prefetch' },
   // { to: '/pagination', label: 'Pagination' },
   // { to: '/persist-cache', label: 'Persistence (concept)' },
@@ -66,6 +67,7 @@ export default function App() {
           <Route path="/refetch" element={<RefetchPage />} />
           <Route path="/mutation" element={<MutationPage />} />
           <Route path="/invalidate-queries" element={<InvalidatePage />} />
+          <Route path="/optimistic" element={<OptimisticUpdatePage />} />
         </Routes>
       </main>
     </div>

@@ -137,6 +137,17 @@ mutation.mutate(input)
 
 - After a mutation, most cases you will want to update the queries
 
+### Optimistic updates
+
+- The interface is updated before the server responses, so you presume the operation will be done.
+- If the operation fails, rollback to the original value.
+
+Good cases to use it:
+- Toggles
+- Checkboxes
+- Drag and drop
+- Any interaction where the user needs a immediately responsee
+
 ## Examples
 
 ### Covered by POC
@@ -154,6 +165,8 @@ mutation.mutate(input)
 [x] - Mutation
 
 [x] - Invalidate
+
+[x] - Optimistic updates
 
 ## Questions
 
