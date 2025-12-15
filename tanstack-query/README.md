@@ -1,5 +1,7 @@
 # Tanstack Query
 
+## [Presentation Link](https://docs.google.com/presentation/d/e/2PACX-1vSnAoo6N9of1nubRyeq-pRV_WMugtguvEbeKbusx8BIF6ODvOgq0Ugr5w93alyEi_cqSzDlw3F-fLAb/pub?start=false&loop=false&delayms=60000&slide=id.g3b0ee756284_1_671)
+
 ### Powerful asynchronous state management, server-state utilities and data fetching
 
 ## Maintainer - Dominik Dorfmeister
