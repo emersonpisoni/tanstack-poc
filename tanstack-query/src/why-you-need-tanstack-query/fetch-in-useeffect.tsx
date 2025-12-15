@@ -9,31 +9,32 @@ export function Bookmarks({ category }: { category: string }) {
 
   useEffect(() => {
     let ignore = false
-    setIsLoading(true)
-    fetch(`${'endpoint'}/${category}`)
-      .then(res => {
+
+    async function fetchData() {
+      setIsLoading(true)
+      try {
+        const res = await fetch(`${'endpoint'}/${category}`)
         if (!res.ok) {
           throw new Error('Failed to fetch')
         }
-        return res.json()
-      })
-      .then(d => {
+        const data = await res.json()
         if (!ignore) {
-          setData(d)
+          setData(data)
           setError(undefined)
         }
-      })
-      .catch(e => {
+      } catch (e) {
         if (!ignore) {
           setError(e)
           setData(undefined)
         }
-      })
-      .finally(() => {
+      } finally {
         if (!ignore) {
           setIsLoading(false)
         }
-      })
+      }
+    }
+
+    fetchData()
     return () => {
       ignore = true
     }
