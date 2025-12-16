@@ -159,6 +159,12 @@ Good cases to use it:
 - Dashboards
 - predictable flows
 
+### Pagination / Infinite Scroll
+
+Pagination in Tanstack Query is just change the queryKey based on page number, for the each page has its own cache.
+
+- Tanstack Query does not what is a page. It only knows different keys
+
 ## Examples
 
 ### Covered by POC
@@ -180,6 +186,8 @@ Good cases to use it:
 [x] - Optimistic updates
 
 [x] - Prefetching data
+
+[x] - Pagination / Infinite Scroll
 
 ## Questions
 

@@ -8,6 +8,8 @@ import InvalidatePage from './routes/invalidate-queries'
 import OptimisticUpdatePage from './routes/optimistic'
 import PrefetchPage from './routes/prefetch'
 import PrefetchDetailPage from './routes/prefetch-detail'
+import PaginationPage from './routes/pagination'
+import InfinitePostsPage from './routes/pagination-infinite'
 
 const links = [
   { to: '/', label: '🏠 Home' },
@@ -18,7 +20,8 @@ const links = [
   { to: '/invalidate-queries', label: 'Invalidation' },
   { to: '/optimistic', label: 'Optimistic update' },
   { to: '/prefetch', label: 'Prefetch' },
-  // { to: '/pagination', label: 'Pagination' },
+  { to: '/pagination', label: 'Pagination' },
+  { to: '/pagination-infinite', label: 'Infinite Pagination' },
   // { to: '/persist-cache', label: 'Persistence (concept)' },
 ]
 
@@ -72,6 +75,8 @@ export default function App() {
           <Route path="/optimistic" element={<OptimisticUpdatePage />} />
           <Route path="/prefetch" element={<PrefetchPage />} />
           <Route path="/prefetch-detail/:postId" element={<PrefetchDetailPage />} />
+          <Route path="/pagination" element={<PaginationPage />} />
+          <Route path="/pagination-infinite" element={<InfinitePostsPage />} />
         </Routes>
       </main>
     </div>
