@@ -148,6 +148,17 @@ Good cases to use it:
 - Drag and drop
 - Any interaction where the user needs a immediately responsee
 
+### Prefetching data
+
+Prefetching is the way to retrieve the data before the user really need them.
+
+Good cases to use it:
+- Links' hover
+- navigation between pages
+- Master -> Detail
+- Dashboards
+- predictable flows
+
 ## Examples
 
 ### Covered by POC
@@ -167,6 +178,8 @@ Good cases to use it:
 [x] - Invalidate
 
 [x] - Optimistic updates
+
+[x] - Prefetching data
 
 ## Questions
 

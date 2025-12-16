@@ -6,6 +6,8 @@ import RefetchPage from './routes/refetch'
 import MutationPage from './routes/mutation'
 import InvalidatePage from './routes/invalidate-queries'
 import OptimisticUpdatePage from './routes/optimistic'
+import PrefetchPage from './routes/prefetch'
+import PrefetchDetailPage from './routes/prefetch-detail'
 
 const links = [
   { to: '/', label: '🏠 Home' },
@@ -15,7 +17,7 @@ const links = [
   { to: '/mutation', label: 'useMutation' },
   { to: '/invalidate-queries', label: 'Invalidation' },
   { to: '/optimistic', label: 'Optimistic update' },
-  // { to: '/prefetch', label: 'Prefetch' },
+  { to: '/prefetch', label: 'Prefetch' },
   // { to: '/pagination', label: 'Pagination' },
   // { to: '/persist-cache', label: 'Persistence (concept)' },
 ]
@@ -68,6 +70,8 @@ export default function App() {
           <Route path="/mutation" element={<MutationPage />} />
           <Route path="/invalidate-queries" element={<InvalidatePage />} />
           <Route path="/optimistic" element={<OptimisticUpdatePage />} />
+          <Route path="/prefetch" element={<PrefetchPage />} />
+          <Route path="/prefetch-detail/:postId" element={<PrefetchDetailPage />} />
         </Routes>
       </main>
     </div>
