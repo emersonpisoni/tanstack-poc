@@ -1,17 +1,30 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useQuery } from "@tanstack/react-query"
+import type { Post } from "./fetch-in-useeffect"
 
-export function Bookmarks({ category }: { category: string }) {
+async function fetchPosts(): Promise<Post[]> {
+  return fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
+    if (!res.ok) {
+      throw new Error('Failed to fetch')
+    }
+    return res.json()
+  })
+}
+
+export function BookmarksQuery() {
   const { isLoading, data, error } = useQuery({
-    queryKey: ['bookmarks', category],
-    queryFn: () =>
-      fetch(`${'endpoint'}/${category}`).then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch')
-        }
-        return res.json()
-      }),
+    queryKey: ['bookmarks'],
+    queryFn: fetchPosts
   })
 
-  // Return JSX based on data and error state
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <ul>
+      {data?.map((post) => (
+        <li key={post.id}>{post.title}</li>
+      ))}
+    </ul>
+  );
 }
