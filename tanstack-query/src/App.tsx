@@ -10,19 +10,24 @@ import PrefetchPage from './routes/prefetch'
 import PrefetchDetailPage from './routes/prefetch-detail'
 import PaginationPage from './routes/pagination'
 import InfinitePostsPage from './routes/pagination-infinite'
+import { Bookmarks } from './why-you-need-tanstack-query/fetch-in-useeffect'
+import { PostsPage } from './why-you-need-tanstack-query/fetch-in-use-fetch-posts'
+import { BookmarksQuery } from './why-you-need-tanstack-query/tanstack-query'
 
 const links = [
-  { to: '/', label: '🏠 Home' },
-  { to: '/use-query', label: 'useQuery' },
-  { to: '/shared-cache', label: 'Shared cache' },
-  { to: '/refetch', label: 'Auto Refetch' },
-  { to: '/mutation', label: 'useMutation' },
-  { to: '/invalidate-queries', label: 'Invalidation' },
-  { to: '/optimistic', label: 'Optimistic update' },
-  { to: '/prefetch', label: 'Prefetch' },
-  { to: '/pagination', label: 'Pagination' },
-  { to: '/pagination-infinite', label: 'Infinite Pagination' },
-  // { to: '/persist-cache', label: 'Persistence (concept)' },
+  // { to: '/', label: '🏠 Home' },
+  // { to: '/use-query', label: 'useQuery' },
+  // { to: '/shared-cache', label: 'Shared cache' },
+  // { to: '/refetch', label: 'Auto Refetch' },
+  // { to: '/mutation', label: 'useMutation' },
+  // { to: '/invalidate-queries', label: 'Invalidation' },
+  // { to: '/optimistic', label: 'Optimistic update' },
+  // { to: '/prefetch', label: 'Prefetch' },
+  // { to: '/pagination', label: 'Pagination' },
+  // { to: '/pagination-infinite', label: 'Infinite Pagination' },
+  { to: '/1', label: 'Fetch in useEffect' },
+  { to: '/2', label: 'Fetch in custom hook' },
+  { to: '/3', label: 'With TanStack Query' },
 ]
 
 export default function App() {
@@ -77,6 +82,9 @@ export default function App() {
           <Route path="/prefetch-detail/:postId" element={<PrefetchDetailPage />} />
           <Route path="/pagination" element={<PaginationPage />} />
           <Route path="/pagination-infinite" element={<InfinitePostsPage />} />
+          <Route path="/1" element={<Bookmarks />} />
+          <Route path="/2" element={<PostsPage />} />
+          <Route path="/3" element={<BookmarksQuery />} />
         </Routes>
       </main>
     </div>
