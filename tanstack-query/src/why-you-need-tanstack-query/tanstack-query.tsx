@@ -60,7 +60,7 @@ export function BookmarksQuery() {
           }
           disabled={mutation.isPending}
         >
-          {mutation.isPending ? "Saving..." : "Creawte bookmark (mutation)"}
+          {mutation.isPending ? "Saving..." : "Create bookmark (mutation)"}
         </button>
 
         {isFetching ? "Updating list (refetch)..." : "List updated"}
